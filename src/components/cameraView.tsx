@@ -2,15 +2,9 @@ import { useEffect } from "react"
 import { useSidebar } from "./ui/sidebar"
 import { AspectRatio } from "./ui/aspect-ratio"
 
-
-interface CameraViewProps {
-	selectedCamera: string
-}
-
-const CameraView = ({ selectedCamera }: CameraViewProps) => {
+const CameraView = () => {
 	const { open } = useSidebar()
 	useEffect(() => {}, [open])
-
 	
 	return (
 		<div className="mt-10 w-full px-4">

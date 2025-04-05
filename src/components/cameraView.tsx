@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import { useSidebar } from "./ui/sidebar"
 import { AspectRatio } from "./ui/aspect-ratio"
-import vdo_camera1 from "@/assets/3car.mov"
-import vdo_camera2 from "@/assets/4car.mov"
+import vdo_camera1 from "@/assets/camera-parking1.mov"
+import vdo_camera2 from "@/assets/camera-parking1.mov"
 
 const cameraVdo: Record<string, string> = {
 	"Camera 1": vdo_camera1,

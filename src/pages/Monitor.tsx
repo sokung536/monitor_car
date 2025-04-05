@@ -73,7 +73,7 @@ const Monitor = () => {
 					</Breadcrumb>
 				</div>
 				<Separator orientation="vertical" className="mr-2 h-4" />
-				<CameraView selectedCamera={selectedCamera} />
+				<CameraView />
 			</main>
 		</SidebarProvider>
 	)

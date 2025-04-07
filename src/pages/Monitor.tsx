@@ -9,6 +9,8 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import CameraView from "@/components/cameraView"
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 const Monitor = () => {
 	const [isLogin, setIsLogin] = useState(false)
 	// const { open } = useSidebar()
@@ -26,7 +28,7 @@ const Monitor = () => {
 			const token = Cookies.get("token")
 			if (token) {
 				try {
-					const res = await axios.get(`/api/authenticateToken`, {
+					const res = await axios.get(`${API_BASE_URL}/api/authenticateToken`, {
 						headers: {
 							authorization: token,
 						},

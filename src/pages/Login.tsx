@@ -8,6 +8,8 @@ import SyncLoader from "react-spinners/SyncLoader"
 import axios from "axios"
 import Cookies from "js-cookie"
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function Login() {
 	const [email, setEmail] = useState("")
 	const [isLoading, setLoading] = useState(false)
@@ -18,7 +20,7 @@ function Login() {
 	const handleLogin = async () => {
 		try {
 			setLoading(true)
-			const response = await axios.post(`/api/login`, {
+			const response = await axios.post(`${API_BASE_URL}/api/login`, {
 				email,
 				password,
 			})

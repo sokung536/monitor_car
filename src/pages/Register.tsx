@@ -6,6 +6,8 @@ import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function Register() {
 	const [firstName, setFirstName] = useState("") // เก็บข้อมูล firstName
 	const [lastName, setLastName] = useState("") // เก็บข้อมูล lastName
@@ -37,7 +39,7 @@ function Register() {
 	const handleRegister = async () => {
 		try {
 			if (await registerValidation()) {
-				const data = await axios.post(`/api/register`, {
+				const data = await axios.post(`${API_BASE_URL}/api/register`, {
 					firstName,
 					lastName,
 					email,
